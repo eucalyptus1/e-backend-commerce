@@ -21,6 +21,9 @@ router.get('/', (req, res) => {
         }
     ]
   })
+  .then(data => {
+    res.json(data);
+  })
 });
 
 // get one product
@@ -43,6 +46,9 @@ router.get('/:id', (req, res) => {
             attributes: ['id', 'tag_name']
         }
     ]
+  })
+  .then(data => {
+    res.json(data);
   })
 });
 
@@ -126,6 +132,9 @@ router.delete('/:id', (req, res) => {
     where: {
       id: req.params.id
     }
+  })
+  .then(data => {
+    res.json(data);
   })
 });
 
